@@ -9,6 +9,8 @@ namespace TradeApi.Domain
 {
     public class Brand : EntityBase
     {
+        public Brand() { }
+
         public Brand(string name)
         {
             Name = name;
