@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\TradeApi.Application\TradeApi.Application.csproj" />
     <ProjectReference Include="..\..\Core\TradeApi.Domain\TradeApi.Domain.csproj" />
   </ItemGroup>
 
