@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TradeApi.Application.Interfaces.Repositories;
+using TradeApi.Application.UnitOfWorks;
 using TradeApi.Persistence.Context;
 using TradeApi.Persistence.Repositories;
+using TradeApi.Persistence.UnitOfWorks;
 
 namespace TradeApi.Persistence
 {
@@ -21,6 +23,8 @@ namespace TradeApi.Persistence
 
             services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
             services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
 
     }
