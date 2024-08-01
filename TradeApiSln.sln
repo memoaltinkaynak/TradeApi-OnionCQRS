@@ -7,17 +7,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D1D1FA56-1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{9D0D207B-02CE-4D73-BC16-7DCAA68ACE5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeApi.Application", "Core\TradeApi.Application\TradeApi.Application.csproj", "{09DB2C3F-AF04-483C-9279-1236DA5D65BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradeApi.Application", "Core\TradeApi.Application\TradeApi.Application.csproj", "{09DB2C3F-AF04-483C-9279-1236DA5D65BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeApi.Domain", "Core\TradeApi.Domain\TradeApi.Domain.csproj", "{4A85F2FC-F624-4948-AFA0-842642932157}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradeApi.Domain", "Core\TradeApi.Domain\TradeApi.Domain.csproj", "{4A85F2FC-F624-4948-AFA0-842642932157}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeApi.Infrastructure", "Infrastructure\TradeApi.Infrastructure\TradeApi.Infrastructure.csproj", "{9F0882C2-2DDA-4BF2-B7BB-DB3F525D5832}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradeApi.Infrastructure", "Infrastructure\TradeApi.Infrastructure\TradeApi.Infrastructure.csproj", "{9F0882C2-2DDA-4BF2-B7BB-DB3F525D5832}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeApi.Persistence", "Infrastructure\TradeApi.Persistence\TradeApi.Persistence.csproj", "{02DE3069-8572-45E9-9198-F54868F79451}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradeApi.Persistence", "Infrastructure\TradeApi.Persistence\TradeApi.Persistence.csproj", "{02DE3069-8572-45E9-9198-F54868F79451}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{A52367F3-C5D6-41F1-9F8D-27E6EEC1558C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeApi.Api", "Presentation\TradeApi.Api\TradeApi.Api.csproj", "{7417E610-5155-4BC3-84D1-FA18E9688C03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradeApi.Api", "Presentation\TradeApi.Api\TradeApi.Api.csproj", "{7417E610-5155-4BC3-84D1-FA18E9688C03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeApi.Mapper", "Core\TradeApi.Mapper\TradeApi.Mapper.csproj", "{9ACBBA57-3147-4687-AF1A-9E1DA799495D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{7417E610-5155-4BC3-84D1-FA18E9688C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7417E610-5155-4BC3-84D1-FA18E9688C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7417E610-5155-4BC3-84D1-FA18E9688C03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ACBBA57-3147-4687-AF1A-9E1DA799495D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ACBBA57-3147-4687-AF1A-9E1DA799495D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ACBBA57-3147-4687-AF1A-9E1DA799495D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ACBBA57-3147-4687-AF1A-9E1DA799495D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{9F0882C2-2DDA-4BF2-B7BB-DB3F525D5832} = {9D0D207B-02CE-4D73-BC16-7DCAA68ACE5D}
 		{02DE3069-8572-45E9-9198-F54868F79451} = {9D0D207B-02CE-4D73-BC16-7DCAA68ACE5D}
 		{7417E610-5155-4BC3-84D1-FA18E9688C03} = {A52367F3-C5D6-41F1-9F8D-27E6EEC1558C}
+		{9ACBBA57-3147-4687-AF1A-9E1DA799495D} = {D1D1FA56-16E6-4A2F-A089-986B6039C249}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {46932668-0190-4EBB-BCF6-2EFDD50A0048}

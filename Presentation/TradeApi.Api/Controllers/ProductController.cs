@@ -1,6 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using TradeApi.Application.Features.Products.Queries.GetAllProducts;
+using TradeApi.Application.UnitOfWorks;
+using TradeApi.Domain;
 
 namespace TradeApi.Api.Controllers
 {
@@ -14,6 +16,7 @@ namespace TradeApi.Api.Controllers
         {
             this.mediator = mediator;
         }
+
 
         [HttpGet]
         public async Task<IActionResult> GetAllProducts()
