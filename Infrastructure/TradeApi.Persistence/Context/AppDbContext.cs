@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using TradeApi.Domain;
+using TradeApi.Domain.Entities;
 
 namespace TradeApi.Persistence.Context
 {
@@ -24,6 +24,8 @@ namespace TradeApi.Persistence.Context
         public DbSet<Category> Categories { get; set; }
         public DbSet<Detail> Details { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet <ProductCategory> ProductCategories { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
