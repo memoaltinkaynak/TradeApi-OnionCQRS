@@ -15,8 +15,4 @@
     <ProjectReference Include="..\TradeApi.Domain\TradeApi.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Products\Command\" />
-  </ItemGroup>
-
 </Project>

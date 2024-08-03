@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TradeApi.Domain;
+using TradeApi.Domain.Entities;
 
 namespace TradeApi.Persistence.Configuration
 {
