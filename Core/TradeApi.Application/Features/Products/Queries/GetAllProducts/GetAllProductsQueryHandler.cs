@@ -32,7 +32,14 @@ namespace TradeApi.Application.Features.Products.Queries.GetAllProducts
             foreach (var item in map)
                 item.Price -= (item.Price * item.Discount / 100);
 
-            return map;
+            try
+            {
+                return map;
+            }
+            catch (Exception)
+            {
+                throw new Exception("hata mesajıı");
+            }
         }
     }
 }
