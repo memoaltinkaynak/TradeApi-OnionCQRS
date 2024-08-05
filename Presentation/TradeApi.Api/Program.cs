@@ -1,6 +1,7 @@
 using TradeApi.Persistence;
 using TradeApi.Application;
 using TradeApi.Mapper;
+using TradeApi.Application.Exceptions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +35,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.ConfigureExceptionHandlingMiddleware();
 app.UseAuthorization();
 
 app.MapControllers();
