@@ -1,15 +1,10 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TradeApi.Application.UnitOfWorks;
 using TradeApi.Domain.Entities;
 
 namespace TradeApi.Application.Features.Products.Command.CreateProduct
 {
-    public class CreateProducutCommandHandler : IRequestHandler<CreateProductCommandRequest>
+    public class CreateProducutCommandHandler : IRequestHandler<CreateProductCommandRequest, Unit>
     {
         private readonly IUnitOfWork unitOfWork;
 
@@ -17,7 +12,7 @@ namespace TradeApi.Application.Features.Products.Command.CreateProduct
         {
             this.unitOfWork = unitOfWork;
         }
-        public async Task Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
         {
             Product product = new(request.Title, request.Description, request.BrandId, request.Price, request.Discount);
 
@@ -34,7 +29,7 @@ namespace TradeApi.Application.Features.Products.Command.CreateProduct
                 await unitOfWork.SaveAsync();
             }
 
-
+            return Unit.Value;
         }
     }
 }
