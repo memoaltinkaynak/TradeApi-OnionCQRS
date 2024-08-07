@@ -1,5 +1,6 @@
 using TradeApi.Persistence;
 using TradeApi.Application;
+using TradeApi.Infrastructure;
 using TradeApi.Mapper;
 using TradeApi.Application.Exceptions;
 
@@ -23,6 +24,7 @@ builder.Configuration
     .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
 
 builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
 builder.Services.AddCustomMapper();
 

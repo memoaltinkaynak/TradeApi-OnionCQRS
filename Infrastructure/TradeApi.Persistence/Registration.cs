@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TradeApi.Application.Interfaces.Repositories;
-using TradeApi.Application.UnitOfWorks;
+using TradeApi.Application.Interfaces.UnitOfWorks;
 using TradeApi.Domain.Entities.Auth;
 using TradeApi.Persistence.Context;
 using TradeApi.Persistence.Repositories;

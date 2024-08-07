@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\TradeApi.Mapper\TradeApi.Mapper.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\TradeApi.Infrastructure\TradeApi.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Infrastructure\TradeApi.Persistence\TradeApi.Persistence.csproj" />
   </ItemGroup>
 

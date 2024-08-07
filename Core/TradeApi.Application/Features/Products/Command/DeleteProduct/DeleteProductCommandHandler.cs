@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TradeApi.Application.UnitOfWorks;
+using TradeApi.Application.Interfaces.UnitOfWorks;
 using TradeApi.Domain.Entities;
 
 namespace TradeApi.Application.Features.Products.Command.DeleteProduct
