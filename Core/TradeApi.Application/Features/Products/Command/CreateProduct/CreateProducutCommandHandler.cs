@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using TradeApi.Application.Features.Products.Rules;
-using TradeApi.Application.UnitOfWorks;
+using TradeApi.Application.Interfaces.UnitOfWorks;
 using TradeApi.Domain.Entities;
 
 namespace TradeApi.Application.Features.Products.Command.CreateProduct

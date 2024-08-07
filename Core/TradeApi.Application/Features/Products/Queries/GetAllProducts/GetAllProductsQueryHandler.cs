@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TradeApi.Application.DTOs;
 using TradeApi.Application.Interfaces.AutoMapper;
-using TradeApi.Application.UnitOfWorks;
+using TradeApi.Application.Interfaces.UnitOfWorks;
 using TradeApi.Domain.Entities;
 
 namespace TradeApi.Application.Features.Products.Queries.GetAllProducts

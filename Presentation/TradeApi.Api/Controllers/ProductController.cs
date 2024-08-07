@@ -4,8 +4,7 @@ using TradeApi.Application.Features.Products.Command.CreateProduct;
 using TradeApi.Application.Features.Products.Command.DeleteProduct;
 using TradeApi.Application.Features.Products.Command.UpdateProduct;
 using TradeApi.Application.Features.Products.Queries.GetAllProducts;
-using TradeApi.Application.UnitOfWorks;
-using TradeApi.Domain;
+
 
 namespace TradeApi.Api.Controllers
 {
