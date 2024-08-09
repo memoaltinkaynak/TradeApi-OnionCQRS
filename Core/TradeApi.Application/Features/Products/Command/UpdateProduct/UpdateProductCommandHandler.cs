@@ -1,24 +1,23 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TradeApi.Application.Bases;
 using TradeApi.Application.Interfaces.AutoMapper;
 using TradeApi.Application.Interfaces.UnitOfWorks;
 using TradeApi.Domain.Entities;
 
 namespace TradeApi.Application.Features.Products.Command.UpdateProduct
 {
-    public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommandRequest, Unit>
+    public class UpdateProductCommandHandler : BasesHandler, IRequestHandler<UpdateProductCommandRequest, Unit>
     {
-        private readonly IUnitOfWork unitOfWork;
-        private readonly IMapper mapper;
 
-        public UpdateProductCommandHandler(IUnitOfWork unitOfWork, IMapper mapper)
+        public UpdateProductCommandHandler(IMapper mapper, IUnitOfWork unitOfWork, IHttpContextAccessor httpContextAccessor) : base(mapper, unitOfWork, httpContextAccessor)
         {
-            this.unitOfWork = unitOfWork;
-            this.mapper = mapper;
+
         }
 
         public async Task<Unit> Handle(UpdateProductCommandRequest request, CancellationToken cancellationToken)
