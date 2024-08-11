@@ -1,11 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TradeApi.Application.Bases;
 using TradeApi.Application.Features.Auth.Rules;
 using TradeApi.Application.Interfaces.AutoMapper;
