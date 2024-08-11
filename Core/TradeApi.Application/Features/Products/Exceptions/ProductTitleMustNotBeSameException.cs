@@ -1,5 +1,4 @@
-﻿
-using TradeApi.Application.Bases;
+﻿using TradeApi.Application.Bases;
 
 namespace TradeApi.Application.Features.Products.Exceptions
 {
