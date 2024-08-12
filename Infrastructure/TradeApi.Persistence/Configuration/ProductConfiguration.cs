@@ -39,4 +39,3 @@ namespace TradeApi.Persistence.Configuration
         }
     }
 }
-
