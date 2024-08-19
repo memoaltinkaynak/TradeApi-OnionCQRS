@@ -9,19 +9,18 @@ using TradeApi.Domain.Entities.Auth;
 
 namespace TradeApi.Application.Features.Auth.Command.Register
 {
-    public class RegisterCommandHandler : BasesHandler, IRequestHandler<RegisterCommandRequest, Unit>
+public class RegisterCommandHandler : BasesHandler, IRequestHandler<RegisterCommandRequest, Unit>
     {
         private readonly AuthRules authRules;
         private readonly UserManager<User> userManager;
         private readonly RoleManager<Role> roleManager;
 
-        public RegisterCommandHandler(AuthRules authRules, UserManager<User> userManager, RoleManager<Role> roleManager, IMapper mapper, IUnitOfWork unitOfWork, IHttpContextAccessor httpContextAccessor ) : base(mapper, unitOfWork, httpContextAccessor)
+        public RegisterCommandHandler(AuthRules authRules, UserManager<User> userManager, RoleManager<Role> roleManager, IMapper mapper, IUnitOfWork unitOfWork, IHttpContextAccessor httpContextAccessor) : base(mapper, unitOfWork, httpContextAccessor)
         {
             this.authRules = authRules;
             this.userManager = userManager;
             this.roleManager = roleManager;
         }
-
         public async Task<Unit> Handle(RegisterCommandRequest request, CancellationToken cancellationToken)
         {
             await authRules.UserShouldNotBeExist(await userManager.FindByEmailAsync(request.Email));
