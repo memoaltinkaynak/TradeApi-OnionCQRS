@@ -1,9 +1,10 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using TradeApi.Application.Features.Products.Queries.GetAllProducts;
 using TradeApi.Application.Features.Products.Command.CreateProduct;
 using TradeApi.Application.Features.Products.Command.DeleteProduct;
 using TradeApi.Application.Features.Products.Command.UpdateProduct;
-using TradeApi.Application.Features.Products.Queries.GetAllProducts;
 
 
 namespace TradeApi.Api.Controllers
@@ -21,6 +22,7 @@ namespace TradeApi.Api.Controllers
 
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetAllProducts()
         {
             var response = await mediator.Send(new GetAllProductsQueryRequest());
