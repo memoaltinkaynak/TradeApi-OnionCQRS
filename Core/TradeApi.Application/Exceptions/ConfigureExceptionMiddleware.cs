@@ -10,4 +10,4 @@ namespace TradeApi.Application.Exceptions
             app.UseMiddleware<ExceptionMiddleware>();
         }
     }
-}
+} 

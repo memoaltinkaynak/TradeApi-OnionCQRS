@@ -14,6 +14,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
 
 //bu kod parçasý uygulamanýn temel yapýlandýrma dosyasýný (appsettings.json) ve ortam bazlý
 //yapýlandýrma dosyasýný (örneðin appsettings.Development.json, appsettings.Production.json) yükler.

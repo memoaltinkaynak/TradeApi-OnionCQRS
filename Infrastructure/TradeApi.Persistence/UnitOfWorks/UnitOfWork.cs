@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TradeApi.Application.Interfaces.Repositories;
+﻿using TradeApi.Application.Interfaces.Repositories;
 using TradeApi.Application.Interfaces.UnitOfWorks;
 using TradeApi.Persistence.Context;
 using TradeApi.Persistence.Repositories;

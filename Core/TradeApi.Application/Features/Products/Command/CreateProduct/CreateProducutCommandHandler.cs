@@ -1,18 +1,19 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Http;
+using TradeApi.Application.Bases;
 using TradeApi.Application.Features.Products.Rules;
+using TradeApi.Application.Interfaces.AutoMapper;
 using TradeApi.Application.Interfaces.UnitOfWorks;
 using TradeApi.Domain.Entities;
 
 namespace TradeApi.Application.Features.Products.Command.CreateProduct
 {
-    public class CreateProducutCommandHandler : IRequestHandler<CreateProductCommandRequest, Unit>
+    public class CreateProducutCommandHandler : BasesHandler, IRequestHandler<CreateProductCommandRequest, Unit>
     {
-        private readonly IUnitOfWork unitOfWork;
         private readonly ProductRules productRules;
 
-        public CreateProducutCommandHandler(IUnitOfWork unitOfWork, ProductRules productRules)
+        public CreateProducutCommandHandler(ProductRules productRules, IMapper mapper, IUnitOfWork unitOfWork, IHttpContextAccessor httpContextAccessor) : base(mapper, unitOfWork, httpContextAccessor)
         {
-            this.unitOfWork = unitOfWork;
             this.productRules = productRules;
         }
         public async Task<Unit> Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
