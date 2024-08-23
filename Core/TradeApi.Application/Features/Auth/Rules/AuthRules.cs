@@ -1,6 +1,7 @@
 ﻿using TradeApi.Application.Bases;
 using TradeApi.Application.Features.Auth.Exceptions;
 using TradeApi.Domain.Entities.Auth;
+using YoutubeApi.Application.Features.Auth.Exceptions;
 namespace TradeApi.Application.Features.Auth.Rules
 {
     public class AuthRules : BaseRules
@@ -21,6 +22,12 @@ namespace TradeApi.Application.Features.Auth.Rules
             if (expiryDate <= DateTime.Now) throw new RefreshTokenShouldNotBeExpiredException();
             return Task.CompletedTask;
             
+        }
+
+        public Task EmailAddressShouldBeValid(User? user)
+        {
+            if (user is null) throw new EmailAddressShouldBeValidException();
+            return Task.CompletedTask;
         }
     }
 }

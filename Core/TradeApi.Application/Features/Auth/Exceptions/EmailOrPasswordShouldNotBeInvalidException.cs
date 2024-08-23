@@ -6,4 +6,5 @@ namespace TradeApi.Application.Features.Auth.Exceptions
     {
         public EmailOrPasswordShouldNotBeInvalidException() : base("Kullanıcı veya şifre hatalı!") { }        
     }
+    
 }
